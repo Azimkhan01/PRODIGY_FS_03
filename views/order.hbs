@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceed to Buy</title>
+    <link rel="stylesheet" href="/public/css/order.css">
+</head>
+<body>
+    <div class="buy-container">
+        <div class="product-summary">
+            <img src="{{image}}" alt="Product Image" class="product-image">
+            <div class="product-info">
+                <h2>{{name}}</h2>
+                <p class="product-price">₹ {{price}}</p>
+                <p class="product-description">{{description}}</p>
+            </div>
+        </div>
+
+        <div class="checkout-form">
+            <h3>Checkout Information</h3>
+            <form action="/order/{{name}}" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Shipping Address:</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <label for="ref-id">Reference ID:</label>
+                <input type="text" id="ref-id" name="ref_id" placeholder="Enter your reference ID">
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment" required>
+                    <option value="cod">Cash on Delivery</option>
+                    <option value="upi">UPI</option>
+                </select>
+
+                <button type="submit" id="submit" class="submit-button">Confirm Purchase</button>
+            </form>
+
+            <div id="upi-section" class="upi-section">
+                <h4>UPI Payment</h4>
+                <p>UPI ID: <strong>yourupiid@upi</strong></p>
+                <img src="path/to/qr-code.png" alt="UPI QR Code" class="upi-qr-code">
+            </div>
+        </div>
+    </div>
+    <script src="/public/js/order.js"></script>
+</body>
+</html>

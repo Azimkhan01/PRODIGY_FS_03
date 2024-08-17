@@ -12,7 +12,7 @@ let selected = document.getElementById("category")
                         <h3>${value["name"]}</h3>
                         <p>${value["description"]}.</p>
                         <p class="price">${" ₹ " +value["price"]}</p>
-                        <a href="#" class="buy-button"">Buy Now</a>`
+                        <a href='buy/${value["name"]}' class="buy-button"">Buy Now</a>`
      parent.appendChild(div);
      
     })
@@ -38,7 +38,7 @@ selected.addEventListener("change",(e)=>{
                             <h3>${value["name"]}</h3>
                             <p>${value["description"]}.</p>
                             <p class="price">${" ₹ " +value["price"]}</p>
-                            <a href="#" class="buy-button"">Buy Now</a>`
+                            <a href= 'buy/${value["name"]}' class="buy-button"">Buy Now</a>`
          parent.appendChild(div);
          
         })
@@ -57,7 +57,7 @@ selected.addEventListener("change",(e)=>{
                             <h3>${value["name"]}</h3>
                             <p>${value["description"]}.</p>
                             <p class="price">${" ₹ " +value["price"]}</p>
-                            <a href="#" class="buy-button"">Buy Now</a>`
+                            <a href='buy/${value["name"]}' class="buy-button"">Buy Now</a>`
          parent.appendChild(div);
          
         })

@@ -6,7 +6,24 @@ mongoose.connect(mongoDB).then(()=>{
 });
 
 let productSchema = mongoose.Schema({},{ strict: false });
-
+let orderSchema = mongoose.Schema({
+    name:{
+        type:String
+    },
+    email:{
+        type:String
+    },
+    address:{
+        type:String
+    },
+    ref_id:{
+        type:String
+    },
+    payment:{
+        type:String
+    }
+},{timestamps:true});
 const products = mongoose.model("products",productSchema);
 const feedback = mongoose.model("message",productSchema);
-module.exports = {products,feedback};
+const order = mongoose.model("order",orderSchema);
+module.exports = {products,feedback,order};

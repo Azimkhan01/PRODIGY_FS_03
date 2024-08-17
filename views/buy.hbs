@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Display</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="/public/css/buy.css">
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-image">
+            <img src="{{image}}" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h2 id="{{type}}" class="product-name">{{name}}</h2>
+            <p class="product-price">₹ {{price}}</p>
+            <p id="{{name}}" class="product-description">{{description}}</p>
+            <!-- Changed button to link -->
+            <a href='/order/{{name}}'' class="buy-button">Proceed to Buy</a>
+        </div>
+    </div>
+
+    <h3 class="related-title">Related Products</h3>
+    <div id="related-products" class="related-products">
+        <!-- Related products will be populated here -->
+    </div>
+    <script src="/public/js/buy.js"></script>
+</body>
+</html>

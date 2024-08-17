@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="/public/css/confirm.css">
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="confirmation-message">
+            <div class="checkmark-container">
+                <div class="checkmark">&#10004;</div>
+            </div>
+            <h1>Thank You!</h1>
+            <p>Your order has been successfully placed.</p>
+            <p class="order-details">
+                Order Number: <strong>{{orderNumber}}</strong><br>
+                Estimated Delivery: <strong>{{deliveryDate}}</strong>
+            </p>
+            <a href="/" class="back-to-home">Continue Shopping</a>
+        </div>
+    </div>
+</body>
+</html>
