@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Local Trading Products</title>
     <link rel="stylesheet" href="/public/css/home.css">
+    <style>
+         /* CSS for the Buy button */
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #28a745;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,9 +34,9 @@
             <nav>
                 <ul>
                     <li><a href="/home">Home</a></li>
-                    <li><a href="/about">About</a></li>
                     <li><a href="/product">Products</a></li>
                     <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,35 +60,9 @@
     <section id="products">
         <div class="container">
             <h2>Best Selling Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h3>Product 1</h3>
-                    <p>Description of product 1.</p>
-                    <p class="price">$10.00</p>
-                    <a href="/" class="btn">Buy Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="product2.jpg" alt="Product 2">
-                    <h3>Product 2</h3>
-                    <p>Description of product 2.</p>
-                    <p class="price">$20.00</p>
-                    <a href="/" class="btn">Buy Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="product3.jpg" alt="Product 3">
-                    <h3>Product 3</h3>
-                    <p>Description of product 3.</p>
-                    <p class="price">$15.00</p>
-                    <a href="/" class="btn">Buy Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="product4.jpg" alt="Product 4">
-                    <h3>Product 4</h3>
-                    <p>Description of product 4.</p>
-                    <p class="price">$12.00</p>
-                    <a href="/" class="btn">Buy Now</a>
-                </div>
+            <div id="product-grid" class="product-grid">
+               
+               
             </div>
         </div>
     </section>
@@ -88,6 +81,7 @@
             <p>&copy; 2024 Local Trading Products. All rights reserved.</p>
         </div>
     </footer>
+    <script src="/public/js/home.js"></script>
 </body>
 
 </html>

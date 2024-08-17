@@ -11,7 +11,7 @@ let selected = document.getElementById("category")
      div.innerHTML = `<img src="${value["image"]}" alt="${value["name"]}">
                         <h3>${value["name"]}</h3>
                         <p>${value["description"]}.</p>
-                        <p class="price">${value["price"]}</p>
+                        <p class="price">${" ₹ " +value["price"]}</p>
                         <a href="#" class="buy-button"">Buy Now</a>`
      parent.appendChild(div);
      
@@ -37,7 +37,7 @@ selected.addEventListener("change",(e)=>{
          div.innerHTML = `<img src="${value["image"]}" alt="${value["name"]}">
                             <h3>${value["name"]}</h3>
                             <p>${value["description"]}.</p>
-                            <p class="price">${value["price"]}</p>
+                            <p class="price">${" ₹ " +value["price"]}</p>
                             <a href="#" class="buy-button"">Buy Now</a>`
          parent.appendChild(div);
          
@@ -56,7 +56,7 @@ selected.addEventListener("change",(e)=>{
          div.innerHTML = `<img src="${value["image"]}" alt="${value["name"]}">
                             <h3>${value["name"]}</h3>
                             <p>${value["description"]}.</p>
-                            <p class="price">${value["price"]}</p>
+                            <p class="price">${" ₹ " +value["price"]}</p>
                             <a href="#" class="buy-button"">Buy Now</a>`
          parent.appendChild(div);
          
