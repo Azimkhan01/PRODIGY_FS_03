@@ -30,7 +30,7 @@
             <p>Address: 123 Trading Street, Local City</p>
             <p>Phone: 123-456-7890</p>
             <p>Email: <a href="mailto:info@tradingproducts.com">info@tradingproducts.com</a></p>
-            <form action="#" method="post">
+            <form action="/contact" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -39,7 +39,7 @@
                 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
-                
+                <p style="color: {{color}};">{{status}}</p>
                 <button type="submit" class="btn">Send Message</button>
             </form>
         </div>

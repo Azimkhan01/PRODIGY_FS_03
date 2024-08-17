@@ -6,6 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Local Trading Products</title>
     <link rel="stylesheet" href="/public/css/product.css">
+    <style>
+        /* Additional CSS for the list box */
+        .filter label {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .filter select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .filter select:hover {
+            border-color: #007bff;
+        }
+
+        .filter select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        /* CSS for the Buy button */
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #28a745;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,35 +70,20 @@
     <section id="products">
         <div class="container">
             <h2>Our Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h3>Product 1</h3>
-                    <p>Description of product 1.</p>
-                    <p class="price">$10.00</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="product2.jpg" alt="Product 2">
-                    <h3>Product 2</h3>
-                    <p>Description of product 2.</p>
-                    <p class="price">$20.00</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="product3.jpg" alt="Product 3">
-                    <h3>Product 3</h3>
-                    <p>Description of product 3.</p>
-                    <p class="price">$15.00</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="product4.jpg" alt="Product 4">
-                    <h3>Product 4</h3>
-                    <p>Description of product 4.</p>
-                    <p class="price">$12.00</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
+            <div class="filter">
+                <label for="category">Filter by Category:</label>
+                <select id="category" name="category">
+                    <option value="all">All</option>
+                    <option value="clothes">Clothes</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="phone">Phone</option>
+                    <option value="gym">Gym</option>
+                    <option value="skincare">Skin Care</option>
+                    <option value="shoes">Shoes</option>
+                </select>
+            </div>
+            <div id="product-grid" class="product-grid">
+                
             </div>
         </div>
     </section>
@@ -64,6 +93,7 @@
             <p>&copy; 2024 Local Trading Products. All rights reserved.</p>
         </div>
     </footer>
+    <script src="/public/js/product.js"></script>
 </body>
 
 </html>
