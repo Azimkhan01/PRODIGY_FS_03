@@ -47,37 +47,6 @@ Make sure you have the following installed on your system:
 6. **Open in Browser:**
    - Open your browser and go to `http://localhost:8000` to access the website.
 
-## Project Structure
-```
-local-store-ecommerce
-├── app.js                     # Main application file
-├── config                     # Configuration files
-│   └── database.js            # Database connection file
-├── models                     # Mongoose models
-│   ├── Product.js             # Product schema
-│   ├── User.js                # User schema
-│   └── Order.js               # Order schema
-├── routes                     # Application routes
-│   ├── productRoutes.js       # Product routes
-│   ├── userRoutes.js          # User routes
-│   └── orderRoutes.js         # Order routes
-├── controllers                # Route controllers
-│   ├── productController.js   # Product controller
-│   ├── userController.js      # User controller
-│   └── orderController.js     # Order controller
-├── views                      # EJS templates
-│   ├── index.ejs              # Homepage
-│   ├── product.ejs            # Product page
-│   ├── cart.ejs               # Cart page
-│   └── checkout.ejs           # Checkout page
-├── public                     # Public assets
-│   ├── css                    # CSS files
-│   │   └── style.css          # Main stylesheet
-│   ├── js                     # JavaScript files
-│   │   └── script.js          # Main script
-│   └── images                 # Image assets
-└── package.json               # Project dependencies
-```
 
 ## Contributing
 If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
