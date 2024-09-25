@@ -7,7 +7,7 @@ mongo is require but connection should be given in database folder file and chan
 steps to run :
 
 1.open terminal and go to location where you want to add this project 
-2. In terminal write git clone linkofproject\n
+2. In terminal write git clone linkofproject
 3. then after install cd to the project file 
 4. Then open the terminal 
 5. write npm install 
