@@ -4,7 +4,8 @@
   "description": " Login signup , authentication and authorisation of web page to login user only",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app",
+    "dev": "nodemon -e js "
   },
   "author": "Azimuddeen mojebur rahman khan",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "bcrypt": "^5.1.1",
     "colors": "^1.4.0",
     "cookie-parser": "^1.4.6",
+    "dotenv": "^17.2.3",
     "express": "^4.19.2",
     "hbs": "^4.2.0",
     "helmet": "^7.1.0",
@@ -19,6 +21,7 @@
     "mongoose": "^8.5.3",
     "nodemailer": "^6.9.14",
     "nodemon": "^3.1.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "razorpay": "^2.9.6"
   }
 }

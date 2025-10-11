@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Display</title>
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="/public/css/buy.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{name}}</title>
+  <link rel="stylesheet" href="/public/css/buy.css">
 </head>
 <body>
-    <div class="product-container">
-        <div class="product-image">
-            <img src="{{image}}" alt="Product Image">
-        </div>
-        <div class="product-details">
-            <h2 id="{{type}}" class="product-name">{{name}}</h2>
-            <p class="product-price">₹ {{price}}</p>
-            <p id="{{name}}" class="product-description">{{description}}</p>
-            <!-- Changed button to link -->
-            <a href='/order/{{name}}'' class="buy-button">Proceed to Buy</a>
-        </div>
+  <div class="product-container">
+    <div class="product-image">
+      <img src="{{image}}" alt="{{type}}">
     </div>
 
-    <h3 class="related-title">Related Products</h3>
-    <div id="related-products" class="related-products">
-        <!-- Related products will be populated here -->
+    <div class="product-details">
+      <h2 class="product-name" data-type="{{type}}">{{name}}</h2>
+      <p class="product-price">₹ {{price}}</p>
+      <p class="product-description">{{description}}</p>
+
+      <!-- ✅ Buy button -->
+      <a href="/order/{{name}}" class="buy-button">Proceed to Buy</a>
     </div>
-    <script src="/public/js/buy.js"></script>
+  </div>
+
+  <h3 class="related-title">Related Products</h3>
+  <div id="related-products" class="related-products"></div>
+
+  <script src="/public/js/buy.js"></script>
 </body>
 </html>

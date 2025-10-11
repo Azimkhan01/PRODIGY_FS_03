@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Local Trading Products</title>
+    <link rel="stylesheet" href="/public/css/success.css">
+    <link rel="stylesheet" href="/public/css/about.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Local Trading Products</h1>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/product">Products</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about" class="active">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="confirmation-container">
+    <div class="confirmation-message">
+      <div class="checkmark-container">
+        <div class="checkmark">&#10004;</div>
+      </div>
+      <h1>Thank You!</h1>
+      <p>Your order has been successfully placed.</p>
+      <p class="order-details">
+        Order Number: <strong id="orderNumber">Loading...</strong><br>
+        Estimated Delivery: <strong id="deliveryDate">Loading...</strong>
+      </p>
+      <a href="/" class="back-to-home">Continue Shopping</a>
+    </div>
+  </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Local Trading Products. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    // Parse query parameters from URL
+    const params = new URLSearchParams(window.location.search);
+    const orderNumber = params.get('orderNumber');
+    const deliveryDate = params.get('deliveryDate');
+
+    // Display them on the page
+    document.getElementById('orderNumber').textContent = orderNumber || 'N/A';
+    document.getElementById('deliveryDate').textContent = deliveryDate || 'N/A';
+</script>
+</html>

@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const mail =async (name,email)=>{
+const mail =async (name,email,product)=>{
   
 
     const transporter = nodemailer.createTransport({
@@ -18,7 +18,7 @@ const mail =async (name,email)=>{
       const info = await transporter.sendMail({
         from: 'azimuddeen3920496@mccmulund.ac.in', // sender address
         to: email, // list of receivers
-        subject: "Order confirmation ", // Subject line
+        subject: `Order confirmation of ${product}`, // Subject line
         text: "Providing quality products and exceptional service with a commitment to customer satisfaction and timely delivery.", // plain text body
         html: `<!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,7 @@ const mail =async (name,email)=>{
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
     <div style="max-width: 600px; margin: 20px auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px;">
         <header style="text-align: center; border-bottom: 1px solid #e0e0e0; padding-bottom: 10px; margin-bottom: 20px;">
-            <h1 style="margin: 0; color: #333;">Order Confirmation</h1>
+            <h1 style="margin: 0; color: #333;">Order Confirmation ${product}</h1>
         </header>
         <main style="font-size: 16px; line-height: 1.6; color: #333;">
             <p style="margin: 0 0 10px;">Dear Customer ${name},</p>

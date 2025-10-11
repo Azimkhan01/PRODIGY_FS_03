@@ -6,6 +6,7 @@ body {
 }
 
 .container {
+    /* min-height: 100vh; */
     width: 90%;
     margin: auto;
     overflow: hidden;
@@ -62,6 +63,10 @@ header nav ul li a.active, header nav ul li a:hover {
 
 /* About Section */
 #about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 40px 0;
     text-align: center;
 }
@@ -87,4 +92,67 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* About Flex Layout */
+.about-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-text {
+    flex: 1 1 50%;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Mission & Vision */
+.mission-vision {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.mission-vision h2 {
+    margin-bottom: 20px;
+    color: #0779e4;
+}
+
+/* Core Values */
+.values {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.value-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.value-box {
+    flex: 1 1 250px;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.value-box:hover {
+    background: #0779e4;
+    color: #fff;
 }

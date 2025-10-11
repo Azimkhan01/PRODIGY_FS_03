@@ -2,10 +2,10 @@ const  mongoose = require('mongoose');
 //Set up default mongoose connection
 const mongoDB = 'mongodb://localhost:27017/Ecommerce_Website';
 mongoose.connect(mongoDB).then(()=>{
-    console.log("Connected to sql succesfully")
+    console.log("Connected to database succesfully. ")
 });
 
-let productSchema = mongoose.Schema({},{ strict: false });
+let productSchema = mongoose.Schema({},{ strict: false,timestamps:true });
 let orderSchema = mongoose.Schema({
     name:{
         type:String

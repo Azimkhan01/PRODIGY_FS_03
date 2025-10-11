@@ -1,4 +1,4 @@
-fetch("http://127.0.0.1:8000/api/hero/true").then(data => data.json()).then((r)=>{
+fetch(`${window.location.origin}/api/hero/true`).then(data => data.json()).then((r)=>{
     let parent = document.getElementById("product-grid")
     
 r.map((value)=>{

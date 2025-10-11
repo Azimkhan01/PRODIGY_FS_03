@@ -1,6 +1,6 @@
 let selected = document.getElementById("category")
     if(selected.value == "all"){
-    fetch("http://127.0.0.1:8000/api").then(data => data.json()).then((r)=>{
+    fetch(`${window.location.origin}/api`).then(data => data.json()).then((r)=>{
         let parent = document.getElementById("product-grid")
         
     r.map((value)=>{
@@ -26,7 +26,7 @@ selected.addEventListener("change",(e)=>{
     if(e.target.value == "all")
     {
            
-        fetch("http://127.0.0.1:8000/api").then(data => data.json()).then((r)=>{
+        fetch(`${window.location.origin}/api`).then(data => data.json()).then((r)=>{
             let parent = document.getElementById("product-grid")
             
         r.map((value)=>{
@@ -45,7 +45,7 @@ selected.addEventListener("change",(e)=>{
         })
      }
      else{
-        fetch(`http://127.0.0.1:8000/api/${e.target.value}`).then(data => data.json()).then((r)=>{
+        fetch(`${window.location.origin}/api/${e.target.value}`).then(data => data.json()).then((r)=>{
             let parent = document.getElementById("product-grid")
             
         r.map((value)=>{
